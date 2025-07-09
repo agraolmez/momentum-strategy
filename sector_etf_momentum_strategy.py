@@ -48,8 +48,8 @@ spy_aligned = spy_returns.loc[momentum_dates]
 
 rf = yf.download('^IRX', start=start_date, auto_adjust=True, progress=False)
 rf_monthly = rf['Close'].resample('M').last().dropna()
-rf_monthly = rf_monthly.loc[momentum_dates] / 100  # Convert from % to decimal
-rf_monthly = (1 + rf_monthly) ** (1/12) - 1  # Approximate monthly risk-free rate
+rf_monthly = rf_monthly.loc[momentum_dates] / 100  
+rf_monthly = (1 + rf_monthly) ** (1/12) - 1  
 
 performance_df = pd.DataFrame({
     'Momentum': momentum_portfolio,
