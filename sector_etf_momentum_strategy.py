@@ -70,12 +70,12 @@ model = sm.OLS(performance_df['Momentum'], X).fit()
 alpha = model.params['const']
 beta = model.params['SPY']
 
-print("📈 Annualized Return:\n", annualized_return)
-print("\n📉 Annualized Volatility:\n", annualized_volatility)
-print("\n⚖️ Sharpe Ratio (with 3M T-Bill):\n", sharpe_ratio)
-print("\n📉 Max Drawdown:\n", max_drawdown)
-print(f"\n🧮 Alpha: {alpha:.4f}")
-print(f"📐 Beta: {beta:.4f}")
+print("Annualized Return:\n", annualized_return)
+print("\n Annualized Volatility:\n", annualized_volatility)
+print("\n Sharpe Ratio (with 3M T-Bill):\n", sharpe_ratio)
+print("\n Max Drawdown:\n", max_drawdown)
+print(f"\n Alpha: {alpha:.4f}")
+print(f" Beta: {beta:.4f}")
 
 plt.figure(figsize=(10, 6))
 plt.plot(cumulative_returns.index, cumulative_returns['Momentum'], label='Momentum Strategy')
