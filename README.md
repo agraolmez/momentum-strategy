@@ -1,14 +1,29 @@
-# momentum-strategy
-A sector ETF-based momentum strategy using Python
+This project implements a monthly momentum-based investment strategy using 11 S&P 500 sector ETFs.
 
-This project implements and analyzes a monthly momentum investment strategy using S&P 500 sector ETFs. It compares the performance of the strategy to SPY using metrics like:
+- Methodology
+Lookback Period: 3 months
+Selection Rule: Top 3 ETFs with the highest cumulative return
+Holding Period: 1 month, equal-weighted
+Benchmark: SPY (S&P 500 ETF)
+Risk-Free Rate: 3-month T-Bill (^IRX)
 
-- Annualized Return
-- Sharpe Ratio (with 3M T-Bill)
-- Max Drawdown
-- Alpha and Beta
+- Performance Metrics
+Metric	Momentum	SPY
+Annualized Return	13.5%	17.5%
+Annualized Volatility	16.7%	17.1%
+Sharpe Ratio (3M T-Bill)	0.61	0.80
+Max Drawdown	-18.3%	-23.9%
+Alpha	-0.0003	—
+Beta	0.81	1.00
 
-Includes plots of cumulative returns and metric comparisons.
+- Interpretation
+SPY outperformed in absolute return.
+Momentum had a lower drawdown and a lower beta (less sensitive to the market).
+Sharpe ratio is slightly worse, indicating a less efficient risk-return tradeoff for this period.
 
-📊 Built with: Python, yfinance, pandas, matplotlib, statsmodels
-📅 Period: Jan 2019 – Present
+- Tools Used
+Python
+yfinance
+pandas
+matplotlib
+statsmodels
