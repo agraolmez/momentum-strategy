@@ -16,14 +16,9 @@ Performance Summary
 - The Sharpe ratio was lower, indicating slightly worse risk-adjusted return in this time period.
 - A Beta of 0.81 means the strategy is less sensitive to market swings, which may be desirable in high-volatility environments.
 
-  ## 📈 Cumulative Returns
+![Cumulative Returns](cumulative_returns.png)
 
-![Cumulative Returns](outcomes/cumulative_returns.png)
+![Performance Metrics](performance_metrics.png)
 
----
-
-## 📊 Performance Metrics
-
-![Performance Metrics](outcomes/performance_metrics.png)
 
 
